@@ -13,7 +13,7 @@
   <Category>Productivity: Other:</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -100,11 +100,6 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
-      <Name>FROM_EMAIL</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value></Value>
       <Name>ALLOW_REGISTRATION</Name>
       <Mode/>
@@ -119,6 +114,46 @@
       <Name>SECRET_KEY</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ENABLE_EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>smtp.google.com</Value>
+      <Name>EMAIL_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>587</Value>
+      <Name>EMAIL_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin@example.com</Value>
+      <Name>EMAIL_HOST_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>EMAIL_HOST_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>True</Value>
+      <Name>EMAIL_USE_TLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>EMAIL_USE_SSL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin@example.com</Value>
+      <Name>FROM_EMAIL</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="PORT" Target="8000" Default="8000" Mode="tcp" Description="WebUI port: 8000" Type="Port" Display="always" Required="true" Mask="false">8555</Config>
@@ -131,12 +166,19 @@
   <Config Name="TIME_ZONE" Target="TIME_ZONE" Default="US/Central" Mode="" Description="Time Zone" Type="Variable" Display="always" Required="true" Mask="false">US/Central</Config>
   <Config Name="RECAPTCHA_PUBLIC_KEY" Target="RECAPTCHA_PUBLIC_KEY" Default="" Mode="" Description="RECAPTCHA_PUBLIC_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="RECAPTCHA_PRIVATE_KEY" Target="RECAPTCHA_PRIVATE_KEY" Default="" Mode="" Description="RECAPTCHA_PRIVATE_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="NOCAPTCHA" Target="NOCAPTCHA" Default="false" Mode="" Description="NOCAPTCHA: true/false&#13;&#10;Default: false" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="NOCAPTCHA" Target="NOCAPTCHA" Default="false" Mode="" Description="NOCAPTCHA: True/False&#13;&#10;Default: False" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="SITE_URL" Target="SITE_URL" Default="" Mode="" Description="SITE_URL: ex. http://www.my-local-gym.com" Type="Variable" Display="always" Required="true" Mask="false">https://wger.example.com</Config>
   <Config Name="DJANGO_MEDIA_ROOT" Target="/home/wger/media" Default="" Mode="rw" Description="Path to uploaded files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wger/media</Config>
   <Config Name="DJANGO_STATIC_ROOT" Target="/home/wger/static" Default="" Mode="rw" Description="DJANGO_STATIC_ROOT" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wger/static</Config>
-  <Config Name="FROM_EMAIL" Target="FROM_EMAIL" Default="" Mode="" Description="From email address when sending emails" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="ALLOW_REGISTRATION" Target="ALLOW_REGISTRATION" Default="true" Mode="" Description="Default: true" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="ALLOW_GUEST_USERS" Target="ALLOW_GUEST_USERS" Default="true" Mode="" Description="Default: true" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ALLOW_REGISTRATION" Target="ALLOW_REGISTRATION" Default="True" Mode="" Description="Default: True" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ALLOW_GUEST_USERS" Target="ALLOW_GUEST_USERS" Default="True" Mode="" Description="Default: True" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="SECRET_KEY" Target="SECRET_KEY" Default="" Mode="" Description="Must be 50 characters" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ENABLE_EMAIL" Target="ENABLE_EMAIL" Default="False" Mode="" Description="Enable SMTP email setting: True/False; Default False" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="EMAIL_HOST" Target="EMAIL_HOST" Default="" Mode="" Description="EMAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false">smtp.google.com</Config>
+  <Config Name="EMAIL_PORT" Target="EMAIL_PORT" Default="" Mode="" Description="EMAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
+  <Config Name="EMAIL_HOST_USER" Target="EMAIL_HOST_USER" Default="" Mode="" Description="EMAIL_HOST_USER" Type="Variable" Display="always" Required="false" Mask="false">admin@example.com</Config>
+  <Config Name="EMAIL_HOST_PASSWORD" Target="EMAIL_HOST_PASSWORD" Default="" Mode="" Description="EMAIL_HOST_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="EMAIL_USE_TLS" Target="EMAIL_USE_TLS" Default="False" Mode="" Description="EMAIL_USE_TLS: True/False; Default: False" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="EMAIL_USE_SSL" Target="EMAIL_USE_SSL" Default="False" Mode="" Description="EMAIL_USE_SSL: True/False; Default: False" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="FROM_EMAIL" Target="FROM_EMAIL" Default="" Mode="" Description="FROM_EMAIL" Type="Variable" Display="always" Required="false" Mask="false">admin@example.com</Config>
 </Container>
