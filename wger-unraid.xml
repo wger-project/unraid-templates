@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1600562701</DateInstalled>
+  <DateInstalled></DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>wger (&#x2C8;v&#x25B;&#x261;&#x250;) Workout Manager is a free, open source web application that help you manage your personal workouts, weight and diet plans and can also be used as a simple gym management utility. It offers a REST API as well, for easy integration with other projects and tools.</Description>
@@ -80,22 +80,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
-      <Name>RECAPTCHA_PUBLIC_KEY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>RECAPTCHA_PRIVATE_KEY</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>false</Value>
-      <Name>NOCAPTCHA</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>https://wger.example.com</Value>
+      <Value></Value>
       <Name>SITE_URL</Name>
       <Mode/>
     </Variable>
@@ -120,17 +105,17 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>smtp.google.com</Value>
+      <Value></Value>
       <Name>EMAIL_HOST</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>587</Value>
+      <Value></Value>
       <Name>EMAIL_PORT</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>admin@example.com</Value>
+      <Value></Value>
       <Name>EMAIL_HOST_USER</Name>
       <Mode/>
     </Variable>
@@ -140,7 +125,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>True</Value>
+      <Value></Value>
       <Name>EMAIL_USE_TLS</Name>
       <Mode/>
     </Variable>
@@ -150,8 +135,43 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>admin@example.com</Value>
+      <Value>admin@aronwk.com</Value>
       <Name>FROM_EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>RECAPTCHA_PUBLIC_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>RECAPTCHA_PRIVATE_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>NOCAPTCHA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>DJANGO_CACHE_BACKEND</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>DJANGO_CACHE_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>DJANGO_CACHE_LOCATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>django_redis.client.DefaultClient</Value>
+      <Name>DJANGO_CACHE_CLIENT_CLASS</Name>
       <Mode/>
     </Variable>
   </Environment>
@@ -164,21 +184,25 @@
   <Config Name="DJANGO_DB_HOST" Target="DJANGO_DB_HOST" Default="" Mode="" Description="Database host" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="DJANGO_DB_PORT" Target="DJANGO_DB_PORT" Default="5432" Mode="" Description="Database port" Type="Variable" Display="always" Required="true" Mask="false">5432</Config>
   <Config Name="TIME_ZONE" Target="TIME_ZONE" Default="US/Central" Mode="" Description="Time Zone" Type="Variable" Display="always" Required="true" Mask="false">US/Central</Config>
-  <Config Name="RECAPTCHA_PUBLIC_KEY" Target="RECAPTCHA_PUBLIC_KEY" Default="" Mode="" Description="RECAPTCHA_PUBLIC_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="RECAPTCHA_PRIVATE_KEY" Target="RECAPTCHA_PRIVATE_KEY" Default="" Mode="" Description="RECAPTCHA_PRIVATE_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="NOCAPTCHA" Target="NOCAPTCHA" Default="false" Mode="" Description="NOCAPTCHA: True/False&#13;&#10;Default: False" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
-  <Config Name="SITE_URL" Target="SITE_URL" Default="" Mode="" Description="SITE_URL: ex. http://www.my-local-gym.com" Type="Variable" Display="always" Required="true" Mask="false">https://wger.example.com</Config>
+  <Config Name="SITE_URL" Target="SITE_URL" Default="" Mode="" Description="SITE_URL: ex. http://www.my-local-gym.com" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="DJANGO_MEDIA_ROOT" Target="/home/wger/media" Default="" Mode="rw" Description="Path to uploaded files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wger/media</Config>
   <Config Name="DJANGO_STATIC_ROOT" Target="/home/wger/static" Default="" Mode="rw" Description="DJANGO_STATIC_ROOT" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wger/static</Config>
   <Config Name="ALLOW_REGISTRATION" Target="ALLOW_REGISTRATION" Default="True" Mode="" Description="Default: True" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="ALLOW_GUEST_USERS" Target="ALLOW_GUEST_USERS" Default="True" Mode="" Description="Default: True" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="SECRET_KEY" Target="SECRET_KEY" Default="" Mode="" Description="Must be 50 characters" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="ENABLE_EMAIL" Target="ENABLE_EMAIL" Default="False" Mode="" Description="Enable SMTP email setting: True/False; Default False" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
-  <Config Name="EMAIL_HOST" Target="EMAIL_HOST" Default="" Mode="" Description="EMAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false">smtp.google.com</Config>
-  <Config Name="EMAIL_PORT" Target="EMAIL_PORT" Default="" Mode="" Description="EMAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
-  <Config Name="EMAIL_HOST_USER" Target="EMAIL_HOST_USER" Default="" Mode="" Description="EMAIL_HOST_USER" Type="Variable" Display="always" Required="false" Mask="false">admin@example.com</Config>
+  <Config Name="ENABLE_EMAIL" Target="ENABLE_EMAIL" Default="False" Mode="" Description="Enable SMTP email setting: True/False; Default False" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="EMAIL_HOST" Target="EMAIL_HOST" Default="" Mode="" Description="EMAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="EMAIL_PORT" Target="EMAIL_PORT" Default="" Mode="" Description="EMAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="EMAIL_HOST_USER" Target="EMAIL_HOST_USER" Default="" Mode="" Description="EMAIL_HOST_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="EMAIL_HOST_PASSWORD" Target="EMAIL_HOST_PASSWORD" Default="" Mode="" Description="EMAIL_HOST_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="EMAIL_USE_TLS" Target="EMAIL_USE_TLS" Default="False" Mode="" Description="EMAIL_USE_TLS: True/False; Default: False" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
   <Config Name="EMAIL_USE_SSL" Target="EMAIL_USE_SSL" Default="False" Mode="" Description="EMAIL_USE_SSL: True/False; Default: False" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
-  <Config Name="FROM_EMAIL" Target="FROM_EMAIL" Default="" Mode="" Description="FROM_EMAIL" Type="Variable" Display="always" Required="false" Mask="false">admin@example.com</Config>
+  <Config Name="FROM_EMAIL" Target="FROM_EMAIL" Default="" Mode="" Description="FROM_EMAIL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="RECAPTCHA_PUBLIC_KEY" Target="RECAPTCHA_PUBLIC_KEY" Default="" Mode="" Description="RECAPTCHA_PUBLIC_KEY" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="RECAPTCHA_PRIVATE_KEY" Target="RECAPTCHA_PRIVATE_KEY" Default="" Mode="" Description="RECAPTCHA_PRIVATE_KEY" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="NOCAPTCHA" Target="NOCAPTCHA" Default="false" Mode="" Description="NOCAPTCHA: true/false&#13;&#10;Default: false" Type="Variable" Display="advanced" Required="false" Mask="false">False</Config>
+  <Config Name="DJANGO_CACHE_BACKEND" Target="DJANGO_CACHE_BACKEND" Default="" Mode="" Description="Leave blank for no cache. Otherwise use this example for redis: django_redis.cache.RedisCache&#13;&#10;" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="DJANGO_CACHE_TIMEOUT" Target="DJANGO_CACHE_TIMEOUT" Default="" Mode="" Description="in seconds" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="DJANGO_CACHE_LOCATION" Target="DJANGO_CACHE_LOCATION" Default="" Mode="" Description="Ex: redis://127.0.0.1:6379/1" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="DJANGO_CACHE_CLIENT_CLASS" Target="DJANGO_CACHE_CLIENT_CLASS" Default="django_redis.client.DefaultClient" Mode="" Description="Container Variable: DJANGO_CACHE_CLIENT_CLASS" Type="Variable" Display="advanced-hide" Required="false" Mask="false">django_redis.client.DefaultClient</Config>
 </Container>
