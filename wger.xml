@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>wger-unraid</Name>
-    <Repository>aronwk/wger:latest</Repository>
+    <Repository>wger/devel:latest</Repository>
     <Registry/>
     <Network>sebnet</Network>
     <MyIP/>
